@@ -22,7 +22,6 @@ const PizzaSection = () => {
       desc: "Our house special signature pizza with premium toppings and extra cheese.",
       img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=400",
     },
-
     {
       id: 3,
       category: "Local Treats",
@@ -39,7 +38,6 @@ const PizzaSection = () => {
       desc: "Bold and Satisfying! Our Special Sauce Base Topped With Juicy Tikka Chunks, Fresh Onion & Crisp Capsicum.",
       img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=400",
     },
-
     {
       id: 5,
       category: "Specialty",
@@ -56,7 +54,6 @@ const PizzaSection = () => {
       desc: "A heavenly blend of mozzarella, cheddar, and parmesan for ultimate cheese fans.",
       img: "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=400",
     },
-
     {
       id: 7,
       category: "Classic Spicy",
@@ -83,22 +80,21 @@ const PizzaSection = () => {
         backgroundSize: "400px",
       }}
     >
-      {" "}
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-10 text-center">
-          <h2 className="text-5xl font-black uppercase italic tracking-tighter text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-gray-900">
             Our <span className="text-[#b91c1c]">Pizza</span>
           </h2>
-          <div className="w-20 h-2 bg-[#b91c1c] mx-auto mt-4 rounded-full"></div>
+          <div className="w-16 md:w-20 h-2 bg-[#b91c1c] mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <Banner className="w-full rounded-[2rem] overflow-hidden flex flex-col md:flex-row items-center mb-12 shadow-xl border-4 border-white/10">
-          <div className="flex-1 p-10 md:p-20">
-            <h1 className="text-white text-8xl md:text-9xl font-black uppercase tracking-tighter leading-none">
+        <Banner className="w-full rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex flex-col md:flex-row items-center mb-12 shadow-xl border-4 border-white/10">
+          <div className="flex-1 p-8 md:p-20">
+            <h1 className="text-white text-6xl md:text-9xl font-black uppercase tracking-tighter leading-none">
               PIZZA
             </h1>
           </div>
-          <div className="flex-1 h-full">
+          <div className="flex-1 h-48 md:h-full w-full">
             <img
               src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800"
               alt="Main Pizza"
@@ -107,36 +103,37 @@ const PizzaSection = () => {
           </div>
         </Banner>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Mobile: grid-cols-2 | Large: lg:grid-cols-4 */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {pizzas.map((pizza) => (
-            <Card key={pizza.id}>
-              <div className="relative rounded-[1rem] overflow-hidden aspect-square mb-4">
+            <Card key={pizza.id} className="p-2 md:p-4">
+              <div className="relative rounded-[0.8rem] md:rounded-[1rem] overflow-hidden aspect-square mb-3">
                 <img
                   src={pizza.img}
                   alt={pizza.name}
                   className="w-full h-full object-cover"
                 />
-                <button className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow-md hover:scale-110 transition-transform">
-                  <Heart size={16} className="text-gray-900" />
+                <button className="absolute top-2 right-2 bg-white p-1 md:p-1.5 rounded-full shadow-md hover:scale-110 transition-transform">
+                  <Heart size={14} className="text-gray-900 md:w-4 md:h-4" />
                 </button>
               </div>
 
-              <div className="flex-1 px-1">
-                <h3 className="font-black text-lg text-gray-900 mb-1 leading-tight">
+              <div className="flex-1 px-1 flex flex-col">
+                <h3 className="font-black text-xs md:text-lg text-gray-900 mb-1 leading-tight line-clamp-1">
                   {pizza.name}
                 </h3>
-                <p className="text-[15px] text-gray-800 font-medium leading-relaxed mb-4 line-clamp-4 h-12">
+                <p className="text-[11px] md:text-[15px] text-gray-800 font-medium leading-tight md:leading-relaxed mb-3 line-clamp-2 h-7 md:h-12">
                   {pizza.desc}
                 </p>
 
                 <div className="mt-auto">
-                  <p className="font-black text-gray-900 text-sm mb-3">
-                    from Rs. {pizza.price}
+                  <p className="font-black text-gray-900 text-sm md:text-2xl mb-2">
+                    Rs. {pizza.price}
                   </p>
 
-                  <Button>
-                    <ShoppingBag size={16} />
-                    Add To Cart
+                  <Button >
+                    <ShoppingBag size={12} className="md:w-4 md:h-4" />
+                    <span>Add Card</span>
                   </Button>
                 </div>
               </div>

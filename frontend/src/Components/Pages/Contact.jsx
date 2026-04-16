@@ -35,7 +35,7 @@ const ContactUs = () => {
   };
 
   const mainBgStyle = {
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2000&auto=format&fit=crop")`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2000&auto=format&fit=crop")`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed",
@@ -77,7 +77,7 @@ const ContactUs = () => {
             Contact <span className="text-orange-500">Us</span>
           </h1>
           <p className="text-gray-300 text-lg md:text-xl font-medium max-w-xl mx-auto">
-            Your feedback is important to us. Delight Crust is always at your
+            Your feedback is important to us. Zesty Bites is always at your
             service!
           </p>
         </div>
@@ -106,8 +106,8 @@ const ContactUs = () => {
                 <h4 className="font-black text-orange-400 text-[10px] uppercase tracking-widest">
                   Help Line
                 </h4>
-                <p className="text-lg font-black italic">044-2635400</p>
-                <p className="text-lg font-black italic">049-4424400</p>
+                <p className="text-lg font-black italic">03245259494</p>
+                <p className="text-lg font-black italic">03194747972</p>
               </div>
             </div>
 
@@ -133,7 +133,7 @@ const ContactUs = () => {
                   Our Outlet
                 </h4>
                 <p className="text-lg font-black italic uppercase leading-tight">
-                  G.T Road, Renala Khurd & Pattoki
+                  G.T Road, Kasur & Pattoki
                 </p>
               </div>
             </div>
@@ -240,7 +240,7 @@ const ContactUs = () => {
 
       <div className="text-center py-10 bg-black/20 backdrop-blur-sm mt-10">
         <p className="text-gray-400 font-bold uppercase text-[10px] tracking-[0.3em] mb-4">
-          Follow Delight Crust
+          Follow Zesty Bites
         </p>
         <div className="flex justify-center gap-8 text-white">
           <span className="hover:text-orange-500 cursor-pointer font-black italic">

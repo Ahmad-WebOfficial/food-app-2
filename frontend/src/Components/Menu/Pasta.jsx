@@ -24,7 +24,7 @@ const PastaSection = () => {
 
   return (
     <section
-      className="w-full py-16 bg-[#f3e3dc]"
+      className="w-full py-10 md:py-16 bg-[#f3e3dc]"
       style={{
         backgroundImage: `url("https://www.transparenttextures.com/patterns/food.png")`,
         backgroundSize: "400px",
@@ -32,63 +32,69 @@ const PastaSection = () => {
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-10 text-center">
-          <h2 className="text-5xl font-black uppercase italic tracking-tighter text-gray-900 leading-none">
+          <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-gray-900 leading-none">
             Our <span className="text-[#b91c1c]">Pastas</span>
           </h2>
-          <div className="w-20 h-2 bg-[#b91c1c] mx-auto mt-4 rounded-full"></div>
+          <div className="w-16 md:w-20 h-2 bg-[#b91c1c] mx-auto mt-4 rounded-full"></div>
         </div>
-        <Banner className="w-full  rounded-[2rem] overflow-hidden flex flex-col md:flex-row items-center mb-12 shadow-xl border-4 border-white/10">
-          <div className="flex-1 p-10 md:p-20">
-            <h1 className="text-white text-8xl md:text-9xl font-black uppercase tracking-tighter leading-none">
+
+        <Banner className="w-full rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex flex-col md:flex-row items-center mb-12 shadow-xl border-4 border-white/10">
+          <div className="flex-1 p-8 md:p-20">
+            <h1 className="text-white text-6xl md:text-9xl font-black uppercase tracking-tighter leading-none">
               PASTA
             </h1>
           </div>
-          <div className="flex-1 h-full">
+          <div className="flex-1 h-48 md:h-full w-full flex justify-center p-6 md:p-10">
             <img
               src="https://pngimg.com/uploads/pasta/pasta_PNG58.png"
-              alt="Main Pizza"
-              className="w-full h-full object-cover"
+              alt="Main Pasta"
+              className="w-full max-w-[300px] md:max-w-[400px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
             />
           </div>
         </Banner>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        {/* Mobile: grid-cols-2 | Desktop: lg:grid-cols-4 */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {pastas.map((item) => (
-            <Card key={item.id}>
-              <div className="relative rounded-[1.5rem] overflow-hidden bg-white/10 aspect-square mb-5 flex items-center justify-center p-4">
+            <Card key={item.id} className="p-2 md:p-4 h-full flex flex-col">
+              <div className="relative rounded-[1rem] md:rounded-[1.5rem] overflow-hidden bg-white/10 aspect-square mb-3 md:mb-5 flex items-center justify-center p-2 md:p-4">
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-500 hover:scale-110"
                 />
-                <button className="absolute top-3 right-3 bg-white p-2 rounded-full shadow-md hover:scale-110 transition-transform cursor-pointer">
-                  <Heart size={18} className="text-[#b91c1c]" />
+                <button className="absolute top-2 right-2 md:top-3 md:right-3 bg-white p-1 md:p-2 rounded-full shadow-md hover:scale-110 transition-transform cursor-pointer">
+                  <Heart
+                    size={14}
+                    className="text-[#b91c1c] md:w-[18px] md:h-[18px]"
+                  />
                 </button>
               </div>
 
-              <div className="flex-1 px-1">
-                <h3 className="font-black text-xl text-gray-900 mb-2 leading-tight uppercase italic">
+              <div className="flex-1 px-1 flex flex-col">
+                <h3 className="font-black text-xs md:text-xl text-gray-900 mb-1 md:mb-2 leading-tight uppercase italic line-clamp-1">
                   {item.name}
                 </h3>
 
-                <p className="text-[15px] text-gray-800 font-medium leading-relaxed mb-6 line-clamp-3 h-12">
+                <p className="text-[10px] md:text-[15px] text-gray-800 font-medium leading-tight md:leading-relaxed mb-3 line-clamp-2 h-6 md:h-12">
                   {item.desc}
                 </p>
 
                 <div className="mt-auto">
-                  <div className="flex justify-between items-end mb-4">
+                  <div className="flex justify-between items-end mb-2 md:mb-4">
                     <div>
-                      <p className="text-[10px] text-gray-700 font-black uppercase tracking-tighter">
+                      <p className="text-[8px] md:text-[10px] text-gray-700 font-black uppercase tracking-tighter">
                         Price
                       </p>
-                      <p className="font-black text-gray-900 text-2xl leading-none">
+                      <p className="font-black text-gray-900 text-sm md:text-2xl leading-none">
                         Rs. {item.price}
                       </p>
                     </div>
                   </div>
 
                   <Button>
-                    <ShoppingBag size={16} />
-                    Add To Cart
+                    <ShoppingBag size={12} className="md:w-4 md:h-4" />
+                    <span className="text-[10px] md:text-sm">Add Card</span>
                   </Button>
                 </div>
               </div>

@@ -1,7 +1,6 @@
 import React from "react";
-import { Heart } from "lucide-react";
+import { Heart, ShoppingBag } from "lucide-react";
 import Button from "../../Utils/Button";
-import { ShoppingBag } from "lucide-react";
 import Card from "../../Utils/Card";
 import Banner from "../../Utils/Banner";
 
@@ -40,57 +39,58 @@ const TreatSection = () => {
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-10 text-center">
-          <h2 className="text-5xl font-black uppercase italic tracking-tighter text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-gray-900">
             Our <span className="text-[#b91c1c]">Local Treat</span>
           </h2>
-          <div className="w-20 h-2 bg-[#b91c1c] mx-auto mt-4 rounded-full"></div>
+          <div className="w-16 md:w-20 h-2 bg-[#b91c1c] mx-auto mt-4 rounded-full"></div>
         </div>
 
-        <Banner className="w-full rounded-[2rem] overflow-hidden flex flex-col md:flex-row items-center mb-12 shadow-xl border-4 border-white/10">
-          <div className="flex-1 p-10 md:p-20">
-            <h1 className="text-white text-8xl md:text-9xl font-black uppercase tracking-tighter leading-none">
+        <Banner className="w-full rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex flex-col md:flex-row items-center mb-12 shadow-xl border-4 border-white/10">
+          <div className="flex-1 p-8 md:p-20">
+            <h1 className="text-white text-6xl md:text-9xl font-black uppercase tracking-tighter leading-none">
               LOCAL TREAT
             </h1>
           </div>
-          <div className="flex-1 h-full w-full">
+          <div className="flex-1 h-48 md:h-full w-full">
             <img
               src="https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG14074.png"
-              alt="Main Pizza"
-              className="w-full h-full object-cover min-h-[300px]"
+              alt="Main Treat"
+              className="w-full h-full object-cover min-h-[250px] md:min-h-[300px]"
             />
           </div>
         </Banner>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Mobile: 2 columns, Desktop: 4 columns */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {localTreats.map((treat) => (
-            <Card key={treat.id}>
-              <div className="relative rounded-[1rem] overflow-hidden aspect-square mb-4">
+            <Card key={treat.id} className="p-2 md:p-4 h-full flex flex-col">
+              <div className="relative rounded-[0.8rem] md:rounded-[1rem] overflow-hidden aspect-square mb-3">
                 <img
                   src={treat.img}
                   alt={treat.name}
                   className="w-full h-full object-cover"
                 />
-                <button className="absolute top-3 right-3 bg-white p-1.5 rounded-full shadow-md hover:scale-110 transition-transform">
-                  <Heart size={16} className="text-gray-900" />
+                <button className="absolute top-2 right-2 bg-white p-1 md:p-1.5 rounded-full shadow-md hover:scale-110 transition-transform">
+                  <Heart size={14} className="text-gray-900 md:w-4 md:h-4" />
                 </button>
               </div>
 
-              <div className="flex-1 px-1">
-                <h3 className="font-black text-lg text-gray-900 mb-1 leading-tight">
+              <div className="flex-1 px-1 flex flex-col">
+                <h3 className="font-black text-xs md:text-lg text-gray-900 mb-1 leading-tight line-clamp-1">
                   {treat.name}
                 </h3>
-                <p className="text-[15px] text-gray-800 font-medium leading-relaxed mb-4 line-clamp-4 h-12">
+                <p className="text-[10px] md:text-[15px] text-gray-800 font-medium leading-tight md:leading-relaxed mb-3 line-clamp-2 h-6 md:h-12">
                   {treat.desc}
                 </p>
 
                 <div className="mt-auto">
-                  <p className="font-black text-gray-900 text-sm mb-3">
+                  <p className="font-black text-gray-900 text-sm md:text-2xl mb-2">
                     from Rs. {treat.price}
                   </p>
 
-                  <Button>
-                    <ShoppingBag size={16} />
-                    Add To Cart
+                  <Button >
+                    <ShoppingBag size={12} className="md:w-4 md:h-4" />
+                    <span>Add Card</span>
                   </Button>
                 </div>
               </div>
