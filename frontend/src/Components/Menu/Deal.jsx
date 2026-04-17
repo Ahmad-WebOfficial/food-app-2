@@ -137,19 +137,19 @@ const Hero3 = () => {
                 </div>
 
                 <div className="flex flex-col flex-grow">
-                  <h3 className="font-black text-[10px] md:text-lg uppercase tracking-tight text-gray-900 mb-1 line-clamp-1">
+                  <h3 className="font-black text-[10px] md:text-lg uppercase tracking-tight text-white mb-1 line-clamp-1">
                     {item.name}
                   </h3>
-                  <p className="text-gray-800 text-[10px] md:text-sm mb-3 line-clamp-2 font-medium leading-tight">
+                  <p className="text-gray-300 text-[10px] md:text-sm mb-3 line-clamp-2 font-medium leading-tight">
                     {item.desc}
                   </p>
 
                   <div className="mt-auto flex flex-col gap-2">
                     <div className="flex flex-col">
-                      <span className="text-[8px] md:text-[9px] text-gray-700 uppercase font-bold tracking-widest leading-none">
+                      <span className="text-[8px] md:text-[9px] text-white uppercase font-bold tracking-widest leading-none">
                         Price
                       </span>
-                      <span className="text-gray-900 font-black text-[11px] md:text-xl">
+                      <span className="text-white font-black text-[11px] md:text-xl">
                         {item.price}
                       </span>
                     </div>

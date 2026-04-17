@@ -119,15 +119,15 @@ const PizzaSection = () => {
               </div>
 
               <div className="flex-1 px-1 flex flex-col">
-                <h3 className="font-black text-xs md:text-lg text-gray-900 mb-1 leading-tight line-clamp-1">
+                <h3 className="font-black text-xs md:text-lg text-white mb-1 leading-tight line-clamp-1">
                   {pizza.name}
                 </h3>
-                <p className="text-[11px] md:text-[15px] text-gray-800 font-medium leading-tight md:leading-relaxed mb-3 line-clamp-2 h-7 md:h-12">
+                <p className="text-[11px] md:text-[15px] text-gray-400 font-medium leading-tight md:leading-relaxed mb-3 line-clamp-2 h-7 md:h-12">
                   {pizza.desc}
                 </p>
 
                 <div className="mt-auto">
-                  <p className="font-black text-gray-900 text-sm md:text-2xl mb-2">
+                  <p className="font-black text-white text-sm md:text-2xl mb-2">
                     Rs. {pizza.price}
                   </p>
 

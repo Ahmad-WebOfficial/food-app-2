@@ -28,9 +28,9 @@ const Header = () => {
             />
           </div>
           <h1 className="text-yellow-500 font-black text-xl uppercase italic tracking-tighter select-none">
-            Delight
+            Zesty
             <span className="text-white group-hover:text-yellow-200 transition-colors">
-              Crust
+              Bites
             </span>
           </h1>
         </Link>

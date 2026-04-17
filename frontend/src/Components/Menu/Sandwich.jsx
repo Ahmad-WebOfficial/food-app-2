@@ -80,15 +80,15 @@ const SandwichSection = () => {
               </div>
 
               <div className="flex-1 px-1 flex flex-col">
-                <h3 className="font-black text-xs md:text-xl text-gray-900 mb-1 md:mb-2 uppercase italic line-clamp-1">
+                <h3 className="font-black text-xs md:text-xl text-white  mb-1 md:mb-2 uppercase italic line-clamp-1">
                   {item.name}
                 </h3>
-                <p className="text-[10px] md:text-[15px] text-gray-800 font-medium leading-tight md:leading-relaxed mb-3 line-clamp-2 h-6 md:h-12">
+                <p className="text-[10px] md:text-[15px] text-gray-400 font-medium leading-tight md:leading-relaxed mb-3 line-clamp-2 h-6 md:h-12">
                   {item.desc}
                 </p>
 
                 <div className="mt-auto">
-                  <p className="font-black text-gray-900 text-sm md:text-2xl mb-2 md:mb-4 leading-none">
+                  <p className="font-black text-white  text-sm md:text-2xl mb-2 md:mb-4 leading-none">
                     Rs. {item.price}
                   </p>
 
